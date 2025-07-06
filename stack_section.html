@@ -1,0 +1,46 @@
+
+<!-- Sección: Tecnologías & Herramientas -->
+<section style="margin-top: 4rem; padding: 2rem; background: #111; border-radius: 20px; box-shadow: 0 0 20px #00f7ff;">
+  <h2 style="text-align: center; color: #00f7ff; font-family: 'Orbitron', sans-serif;">⚙️ Tecnologías & Herramientas</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
+    <div style="text-align: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" />
+      <p>Python</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" />
+      <p>JavaScript</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" />
+      <p>React</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="50" />
+      <p>Docker</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="50" />
+      <p>Linux</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="50" />
+      <p>VS Code</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 3rem;">
+    <h3 style="color: #0ff;">🧠 Snippet de Código IA</h3>
+    <pre style="background: #000; color: #0ff; padding: 1rem; border-radius: 10px; overflow-x: auto;">
+from fastapi import FastAPI
+from openai import OpenAI
+
+app = FastAPI()
+
+@app.post("/diagnostico")
+async def evaluar(data: dict):
+    gpt = OpenAI()
+    return gpt.analizar(data)
+    </pre>
+  </div>
+</section>
