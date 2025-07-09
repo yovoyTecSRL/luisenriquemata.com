@@ -1,7 +1,10 @@
-# 🤖 COPILOT_PROMPT.md — Plan de Evolución Landing Luis Enrique Mata
+# Propósito del sitio
+Este sitio representa la presencia profesional de Luis Enrique Mata y la plataforma Orbix AI Systems. Muestra capacidades en IA, validación bancaria, automatización, Odoo, seguridad y DevOps.
 
-## 🎯 Objetivo General
-Convertir esta landing personal en un **centro de operaciones profesional**, conectado con IA, automatización, y portafolio técnico de alto nivel. Debe escalar según nuevas oportunidades, ideas y tecnologías emergentes.
+# Funciones esperadas
+- Interfaz moderna y responsive
+- Publicación automatizada vía GitHub Pages
+- Dominio personalizado funcionando: sistemasorbix.com
 
 ---
 
