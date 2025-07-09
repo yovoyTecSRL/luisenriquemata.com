@@ -1,7 +1,7 @@
-# Orbix AI Systems
-Landing oficial de Orbix AI Systems: automatización inteligente, seguridad digital y validación financiera con GPT-4 y Odoo.
+# Luis Enrique Mata — Landing Page
 
-Publicada en GitHub Pages: https://sistemasorbix.com
+Esta es la landing personal profesional de Luis Enrique Mata, CEO de Orbix Systems.
+Publicada en GitHub Pages: https://luisenriquemata.com
 
 Incluye:
 - Currículum técnico futurista
