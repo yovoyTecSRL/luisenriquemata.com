@@ -1,0 +1,30 @@
+# Configuración para Systemd (Linux)
+# Para mantener el servidor siempre activo como servicio del sistema
+
+[Unit]
+Description=Luis Enrique Mata Landing Page Server
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=codespace
+Group=codespace
+WorkingDirectory=/workspaces/luisenriquemata.com
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+ExecStart=/workspaces/luisenriquemata.com/start_server.sh 8000
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=luisenriquemata-server
+
+# Configuraciones de seguridad
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/workspaces/luisenriquemata.com
+
+[Install]
+WantedBy=multi-user.target
