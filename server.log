@@ -1,0 +1,166 @@
+nohup: ignoring input
+/workspaces/luisenriquemata.com/main.py:107: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+/workspaces/luisenriquemata.com/main.py:118: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("shutdown")
+2025-07-15 12:06:20,497 - __main__ - INFO - 🌐 Iniciando servidor en http://0.0.0.0:8000
+INFO:     Started server process [6568]
+INFO:     Waiting for application startup.
+2025-07-15 12:06:20,523 - main - INFO - 🚀 Iniciando servidor Luis Enrique Mata Landing...
+2025-07-15 12:06:20,524 - main - INFO - ✅ Servidor iniciado exitosamente
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:46846 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:44650 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53656 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50724 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38248 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60734 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46102 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38376 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56326 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55198 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55152 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /about.html HTTP/1.1" 404 Not Found
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41914 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /index.html HTTP/1.1" 404 Not Found
+INFO:     186.32.220.184:0 - "GET /about.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51698 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44126 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /about.html HTTP/1.1" 404 Not Found
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /about.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:45704 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /about.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59490 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40690 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /about.html HTTP/1.1" 404 Not Found
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41232 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /about.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52704 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53360 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55180 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54842 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34264 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56340 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38640 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41606 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49634 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41218 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54926 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53864 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39200 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47108 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51636 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46704 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41628 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /about.html HTTP/1.1" 404 Not Found
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /proyectos.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60046 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47548 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34750 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33320 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40902 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60094 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56906 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43810 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57012 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43322 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35314 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37054 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53452 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35368 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50340 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37356 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /contacto.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54456 - "GET /health HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET / HTTP/1.1" 200 OK
+INFO:     186.32.220.184:0 - "GET /proyectos.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56442 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56900 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50606 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60992 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52526 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49634 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33188 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34898 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52898 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34514 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35272 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43390 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56148 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55380 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45952 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36040 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48256 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50922 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55222 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47542 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42632 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57164 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49016 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39960 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49266 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38758 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43644 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39050 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40040 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33696 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57458 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57600 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32882 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54712 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55980 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41868 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53808 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57446 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43472 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42522 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47592 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35176 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47996 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39714 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42048 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57636 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33010 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59784 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58536 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44770 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57738 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55120 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55818 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43186 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46234 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60884 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59550 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57194 - "GET /health HTTP/1.1" 200 OK
+2025-07-16 04:07:28,807 - __main__ - INFO - 🌐 Iniciando servidor en http://0.0.0.0:8000
+2025-07-16 04:07:29,376 - main - INFO - 🚀 Iniciando servidor Luis Enrique Mata Landing...
+2025-07-16 04:07:29,378 - main - INFO - ✅ Servidor iniciado exitosamente
+2025-07-16 04:07:29,380 - main - WARNING - Health check failed: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7381226f72c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-07-16 04:07:29,381 - main - ERROR - Server health check failed!
+2025-07-16 04:16:30,935 - main - INFO - 🛑 Servidor detenido

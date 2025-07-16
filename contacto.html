@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Luis Enrique Mata | Orbix Systems</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+    
+    /* Navegación */
+    nav {
+      background-color: #1a1a2e;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffff;
+      text-decoration: none;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    
+    .nav-menu a {
+      color: #f1f1f1;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-menu a:hover {
+      background-color: #00ffff;
+      color: #0f0f0f;
+    }
+    
+    .nav-menu a.active {
+      background-color: #00ffff;
+      color: #0f0f0f;
+    }
+    
+    /* Header principal */
+    header {
+      background: linear-gradient(135deg, #1e1e2f, #16213e);
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 3px solid #00ffff;
+      margin-top: 60px;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #00ffff, #0080ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+    
+    /* Contenido principal */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    
+    .contact-info {
+      background: linear-gradient(145deg, #1a1a2e, #16213e);
+      border-radius: 15px;
+      padding: 2rem;
+      border: 1px solid #333;
+    }
+    
+    .contact-form {
+      background: linear-gradient(145deg, #1a1a2e, #16213e);
+      border-radius: 15px;
+      padding: 2rem;
+      border: 1px solid #333;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: rgba(0, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover {
+      background-color: rgba(0, 255, 255, 0.2);
+    }
+    
+    .contact-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      color: #00ffff;
+    }
+    
+    .contact-details h3 {
+      color: #00ffff;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-details p {
+      color: #ccc;
+    }
+    
+    .contact-details a {
+      color: #00ffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .contact-details a:hover {
+      color: #0080ff;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #00ffff;
+      font-weight: bold;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #1a1a2e;
+      color: #f1f1f1;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #00ffff;
+    }
+    
+    .form-group textarea {
+      height: 120px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(45deg, #00ffff, #0080ff);
+      color: #000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      width: 100%;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, #00ffff, #0080ff);
+      color: #000;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #1a1a2e;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Orbix Systems</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre Mí</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header principal -->
+  <header>
+    <h1>Contacto</h1>
+    <p class="subtitle">¿Listo para crear el futuro juntos?</p>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <div class="contact-grid">
+      
+      <!-- Información de contacto -->
+      <div class="contact-info">
+        <h2 style="color: #00ffff; margin-bottom: 1.5rem;">Información de Contacto</h2>
+        
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <p><a href="mailto:info@sistemasorbix.com">info@sistemasorbix.com</a></p>
+            <p><a href="mailto:enrique@yovoytech.com">enrique@yovoytech.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-details">
+            <h3>Sitio Web</h3>
+            <p><a href="https://sistemasorbix.com" target="_blank">sistemasorbix.com</a></p>
+            <p><a href="https://yovoytech.com" target="_blank">yovoytech.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div class="contact-details">
+            <h3>LinkedIn</h3>
+            <p><a href="https://linkedin.com/in/luisenriquemata" target="_blank">linkedin.com/in/luisenriquemata</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div class="contact-details">
+            <h3>WhatsApp Business</h3>
+            <p><a href="https://wa.me/50687654321" target="_blank">+506 8765-4321</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-details">
+            <h3>Ubicación</h3>
+            <p>San José, Costa Rica</p>
+            <p>Servicios globales disponibles</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">⏰</div>
+          <div class="contact-details">
+            <h3>Horario</h3>
+            <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
+            <p>Zona horaria: UTC-6 (CST)</p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Formulario de contacto -->
+      <div class="contact-form">
+        <h2 style="color: #00ffff; margin-bottom: 1.5rem;">Envíame un Mensaje</h2>
+        
+        <form id="contactForm" action="mailto:info@sistemasorbix.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="company">Empresa</label>
+            <input type="text" id="company" name="company">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto o consulta..." required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Enviar Mensaje</button>
+        </form>
+        
+        <div class="social-links">
+          <a href="https://linkedin.com/in/luisenriquemata" target="_blank" class="social-link">💼</a>
+          <a href="https://github.com/luisenriquemata" target="_blank" class="social-link">🐱</a>
+          <a href="https://wa.me/50687654321" target="_blank" class="social-link">📱</a>
+          <a href="mailto:info@sistemasorbix.com" class="social-link">📧</a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: linear-gradient(145deg, #1a1a2e, #16213e); border-radius: 15px; border: 1px solid #333;">
+      <h3 style="color: #00ffff; margin-bottom: 1rem;">¿Qué puedo hacer por ti?</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div style="padding: 1rem; background-color: rgba(0, 255, 255, 0.1); border-radius: 10px;">
+          <h4 style="color: #00ffff; margin-bottom: 0.5rem;">🤖 Automatización IA</h4>
+          <p style="color: #ccc; font-size: 0.9rem;">Desarrollo de sistemas inteligentes y chatbots</p>
+        </div>
+        <div style="padding: 1rem; background-color: rgba(0, 255, 255, 0.1); border-radius: 10px;">
+          <h4 style="color: #00ffff; margin-bottom: 0.5rem;">🏗️ Arquitectura de Software</h4>
+          <p style="color: #ccc; font-size: 0.9rem;">Diseño de soluciones escalables y robustas</p>
+        </div>
+        <div style="padding: 1rem; background-color: rgba(0, 255, 255, 0.1); border-radius: 10px;">
+          <h4 style="color: #00ffff; margin-bottom: 0.5rem;">☁️ Cloud & DevOps</h4>
+          <p style="color: #ccc; font-size: 0.9rem;">Despliegue y orquestación en la nube</p>
+        </div>
+        <div style="padding: 1rem; background-color: rgba(0, 255, 255, 0.1); border-radius: 10px;">
+          <h4 style="color: #00ffff; margin-bottom: 0.5rem;">🎨 Desarrollo Full-Stack</h4>
+          <p style="color: #ccc; font-size: 0.9rem;">Aplicaciones web y móviles modernas</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    <p>© 2025 YoVoyTech Systems | Orbix Platform - Construyendo el futuro digital</p>
+  </div>
+
+  <script>
+    // Menú hamburguesa para móviles
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Cerrar menú al hacer click en un enlace
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

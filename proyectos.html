@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos | Luis Enrique Mata | Orbix Systems</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+    
+    /* Navegación */
+    nav {
+      background-color: #1a1a2e;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffff;
+      text-decoration: none;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    
+    .nav-menu a {
+      color: #f1f1f1;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-menu a:hover {
+      background-color: #00ffff;
+      color: #0f0f0f;
+    }
+    
+    .nav-menu a.active {
+      background-color: #00ffff;
+      color: #0f0f0f;
+    }
+    
+    /* Hamburger menu para móviles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #00ffff;
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+    
+    /* Header principal */
+    header {
+      background: linear-gradient(135deg, #1e1e2f, #16213e);
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 3px solid #00ffff;
+      margin-top: 60px;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #00ffff, #0080ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+    
+    /* Contenido principal */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .project-card {
+      background: linear-gradient(145deg, #1a1a2e, #16213e);
+      border-radius: 15px;
+      padding: 2rem;
+      border: 1px solid #333;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(45deg, #00ffff, #0080ff);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+    }
+    
+    .project-title {
+      color: #00ffff;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .project-description {
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .tech-tag {
+      background-color: #00ffff;
+      color: #0f0f0f;
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .project-link {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .link-demo {
+      background-color: #00ffff;
+      color: #0f0f0f;
+    }
+    
+    .link-demo:hover {
+      background-color: #0080ff;
+    }
+    
+    .link-github {
+      background-color: transparent;
+      color: #00ffff;
+      border: 1px solid #00ffff;
+    }
+    
+    .link-github:hover {
+      background-color: #00ffff;
+      color: #0f0f0f;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #1a1a2e;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+      
+      .nav-menu li {
+        margin: 1rem 0;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .nav-container {
+        padding: 0 1rem;
+      }
+      
+      main {
+        padding: 1rem;
+      }
+      
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Orbix Systems</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre Mí</a></li>
+        <li><a href="proyectos.html" class="active">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header principal -->
+  <header>
+    <h1>Proyectos Destacados</h1>
+    <p class="subtitle">Soluciones innovadoras con IA y automatización</p>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <div class="project-grid">
+      
+      <!-- Orbix Sentinel -->
+      <div class="project-card">
+        <h3 class="project-title">🔐 Orbix Sentinel</h3>
+        <p class="project-description">
+          Sistema de seguridad avanzado con IA para monitoreo en tiempo real. Firewall inteligente con interfaz estilo Matrix para control total de red y procesos.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">IA</span>
+          <span class="tech-tag">Cybersecurity</span>
+          <span class="tech-tag">Matrix UI</span>
+        </div>
+        <div class="project-links">
+          <a href="orbix-sentinel.html" class="project-link link-demo">Ver Detalles</a>
+          <a href="https://github.com/orbixsystems/sentinel" class="project-link link-github" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <!-- CoopeAvatarCity -->
+      <div class="project-card">
+        <h3 class="project-title">🏙️ CoopeAvatarCity</h3>
+        <p class="project-description">
+          Ciudad digital con avatares inteligentes que interactúan con usuarios mediante voz natural, lip-sync y personalidad única. Asistentes virtuales del futuro.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">GPT-4</span>
+          <span class="tech-tag">ThreeJS</span>
+          <span class="tech-tag">WebGL</span>
+          <span class="tech-tag">Voice AI</span>
+          <span class="tech-tag">Lip Sync</span>
+        </div>
+        <div class="project-links">
+          <a href="coopeavatarcity.html" class="project-link link-demo">Ver Detalles</a>
+          <a href="https://coopeavatarcity.com" class="project-link link-github" target="_blank">Demo Live</a>
+        </div>
+      </div>
+
+      <!-- Validación Financiera -->
+      <div class="project-card">
+        <h3 class="project-title">🏦 Validación Financiera IA</h3>
+        <p class="project-description">
+          Plataforma bancaria con chatbot inteligente para validaciones en tiempo real. Integración con CCSS, SUGEF, BCR y registro automático en Odoo.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Odoo 16</span>
+          <span class="tech-tag">Chatbot</span>
+          <span class="tech-tag">Banking APIs</span>
+          <span class="tech-tag">Mimoto</span>
+        </div>
+        <div class="project-links">
+          <a href="validacion-financiera.html" class="project-link link-demo">Ver Detalles</a>
+          <a href="https://sistemasorbix.com/finance" class="project-link link-github" target="_blank">Demo</a>
+        </div>
+      </div>
+
+      <!-- Orbix Core -->
+      <div class="project-card">
+        <h3 class="project-title">⚙️ Orbix Core Platform</h3>
+        <p class="project-description">
+          Plataforma central de automatización e IA. Orquestación de contenedores, despliegue automatizado y ecosistema completo para soluciones empresariales.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Kubernetes</span>
+          <span class="tech-tag">GitHub Actions</span>
+          <span class="tech-tag">Azure</span>
+          <span class="tech-tag">Hetzner</span>
+        </div>
+        <div class="project-links">
+          <a href="orbix-core.html" class="project-link link-demo">Ver Detalles</a>
+          <a href="https://sistemasorbix.com" class="project-link link-github" target="_blank">Sitio Web</a>
+        </div>
+      </div>
+
+      <!-- Mimoto Express -->
+      <div class="project-card">
+        <h3 class="project-title">📦 Mimoto Express</h3>
+        <p class="project-description">
+          Sistema de envíos inteligente con seguimiento en tiempo real, optimización de rutas con IA y integración completa con plataformas de e-commerce.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Maps API</span>
+          <span class="tech-tag">AI Routing</span>
+          <span class="tech-tag">Real-time</span>
+        </div>
+        <div class="project-links">
+          <a href="mimoto-express.html" class="project-link link-demo">Ver Detalles</a>
+          <a href="https://mimoto.express" class="project-link link-github" target="_blank">Sitio Web</a>
+        </div>
+      </div>
+
+      <!-- Dashboard Empresarial -->
+      <div class="project-card">
+        <h3 class="project-title">📊 Dashboard Empresarial</h3>
+        <p class="project-description">
+          Panel de control integral con KPIs, leads, análisis de riesgos y tráfico. Conexión directa con Odoo ERP y CRM para gestión empresarial total.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Vue.js</span>
+          <span class="tech-tag">D3.js</span>
+          <span class="tech-tag">Odoo API</span>
+          <span class="tech-tag">Analytics</span>
+          <span class="tech-tag">PDF Reports</span>
+        </div>
+        <div class="project-links">
+          <a href="dashboard-empresarial.html" class="project-link link-demo">Ver Detalles</a>
+          <a href="https://sistemasorbix.com/dashboard" class="project-link link-github" target="_blank">Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="footer">
+    <p>© 2025 YoVoyTech Systems | Orbix Platform - Proyectos que transforman el futuro</p>
+  </div>
+
+  <script>
+    // Menú hamburguesa para móviles
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
